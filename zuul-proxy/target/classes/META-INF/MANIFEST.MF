@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Mahendra
+Build-Jdk: 11.0.9
+Implementation-Title: proxy
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: com.github.mthizo247
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/zuul-websocket
+ -support-demo/proxy/
+Created-By: Maven Integration for Eclipse
+

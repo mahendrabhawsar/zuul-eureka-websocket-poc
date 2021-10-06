@@ -1,0 +1,27 @@
+server:
+  port: 7078
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka
+    registerWithEureka: false
+    fetchRegistry: true
+  instance: 
+    preferIpAddress: true
+    hostname: localhost
+zuul:
+   ignoredServices: "*"
+   routes:
+    hello:
+      path: /**
+      #url: http://localhost:7079
+      serviceId: HELLO
+      customSensitiveHeaders: true
+ribbon: 
+  eureka: 
+    enabled: true
+logging:
+  file: C:\Mahendra\Mahendra_Data\applicatoins_log\applicatin.log
+  level:
+    org.springframework.boot: DEBUG
+    com.github.mthizo247.proxy: DEBUG

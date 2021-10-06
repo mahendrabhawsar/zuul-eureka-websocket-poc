@@ -1,0 +1,31 @@
+server:
+  port: 7078
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka
+    registerWithEureka: false
+    fetchRegistry: true
+  instance: 
+    preferIpAddress: true
+zuul:
+   ignoredServices: "*"
+   routes:
+    hello:
+      path: /**
+      #url: http://localhost:7079
+      service-id: HELLO
+      customSensitiveHeaders: true
+   ws:
+      brokerages:
+        hello:
+          end-points: /gs-guide-websocket
+          brokers:  /topic
+          destination-prefixes: /app
+ribbon: 
+  eureka: 
+    enabled: true
+logging:
+  level:
+    org.springframework.boot: DEBUG
+    com.github.mthizo247.proxy: DEBUG
